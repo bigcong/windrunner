@@ -1,7 +1,9 @@
----
-title:  总结
-tags:   [教程]
-categories: 总结
+title: "\_总结"
+tags:
+  - 教程
+categories:
+  - 总结
+date: 2017-05-04 10:02:00
 ---
 
 
