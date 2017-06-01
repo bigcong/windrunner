@@ -32,6 +32,7 @@ lsof -i tcp:8080
 ```
 
 
+
 ### 启用root
 
 ``` bash
@@ -47,8 +48,17 @@ lsof -i tcp:8080
     chmod 600 .ssh/authorized_keys
     chmod 700 -R .ssh 
 ```
+### 给予某个用户权限某个用户权限
+```
+ chown -R jenkins:jenkins /data/app/jar/
+```
 
-## mysql命令
+### curl 模拟提交文件
+```
+curl -F "file=@/Users/cong/Downloads/1.jpg" http://localhost:8081/upload/test
+```
+
+## 运维命令
 
 
 ### mysql将结果导出文件
@@ -93,6 +103,15 @@ date=` date +%F`
 echo $date
  mysqldump -h 172.0.0.1  -uroot -pcc cc  > /data/app/sql/cc-$date.sql
 ```
+
+### redis常用配置
+```
+  daemonize yes  后台启动
+  bind 0.0.0.0  绑定IP
+  dir /var/lib/redis  修改数据文件存储位置
+
+```
+
 
 ## 树莓派
 ### Mac 下将img 烧录到 内存卡中
@@ -147,4 +166,5 @@ git checkout -b develop  remotes/origin/develop
 
 
 ```
+
 
