@@ -39,3 +39,11 @@ double   f   =   111231.5585;
 BigDecimal   b   =   new   BigDecimal(f);  
 double   f1   =   b.setScale(2,   BigDecimal.ROUND_HALF_UP).doubleValue();  
 ```
+
+### java 8 分区
+
+```
+  Map<Boolean, List<CaCustomerCard>> collect = caCustomerCards.stream().collect(Collectors.partitioningBy(t -> t.getId() == cardId));
+
+```
+
