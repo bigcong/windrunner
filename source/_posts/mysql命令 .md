@@ -8,3 +8,9 @@
 ```
 show full processlist; 
 ```
+
+###  开启远端权限
+```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'IDENTIFIED BY '' WITH GRANT OPTION; 
+
+```
