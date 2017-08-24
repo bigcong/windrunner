@@ -1,7 +1,9 @@
 title: mysql注意点
 tags:
+  - mysql总结
+  - ''
+categories:
   - mysql
-categories: []
 date: 2017-07-14 12:15:00
 ---
 

@@ -1,3 +1,13 @@
+title: mysql命令
+tags:
+  - 命令
+categories:
+  - mysql
+author: ''
+date: 2017-08-24 16:48:00
+---
+
+---
 ## mysql 查看表占用
 
 ```
