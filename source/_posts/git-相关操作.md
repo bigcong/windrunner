@@ -167,4 +167,39 @@ git checkout -b develop  remotes/origin/develop
 
 ```
 
+## git 命令
+
+### git 回退某个版本
+
+
+有时候我们会要会退某一个版本,我们首先要找到我们要回退的版本号
+
+```
+ git log
+ 
+```
+
+然后我们找到要回退的版本号的，将本地分支reset需要回退的分支版本
+
+```bash
+git reset --hard   a0dd99cd7a00ac95d3e0a54d4b0a1a51db41d498
+
+```
+
+这时候我们如果git push，那么会一定会出现错误，所以需要用加上-f
+
+```bash
+git push -f
+
+```
+### git 查看远程分支
+```
+git branch -a
+```
+### git 拉取远程分支并创建本地分支
+```
+git checkout -b develop  remotes/origin/develop
+
+
+```
 
