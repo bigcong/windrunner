@@ -1,7 +1,6 @@
 title: java代码
 date: 2017-08-24 16:48:37
 ---
-
 ---
 ### 优雅读取文件
 
@@ -57,6 +56,24 @@ date: 2017-08-24 16:48:37
 
 ```
 
+### 优雅的写入文件
+
+```
+ PrintStream out = new PrintStream(newFileOutputStream("/Users/cong/Desktop/pass/passwd.txt"));
+ out.println(stringBuilder.toString());
+
+```
+
+### 读取大文件
+
+```
+FileChannel fileChannel =FileChannel.open(Paths.get("/phoenix/2.txt"), StandardOpenOption.WRITE, StandardOpenOption.READ, StandardOpenOption.CREATE);
+ MappedByteBuffer   mbb = fileChannel.map(FileChannel.MapMode.READ_ONLY, i, 1024000);
+ String p = forName("utf-8").decode(mbb).toString().trim();
+
+
+
+```
 
 
 
