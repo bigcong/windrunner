@@ -23,7 +23,12 @@ public class HomeController {
     public String index(@RequestParam(defaultValue = "1") int page, Model model) {
         page = page < 1 ? 0 : page - 1;
         Page<Post> posts = postService.getAllPublishedPostsByPage(page, appSetting.getPageSize());
+        for (Post s : posts) {
+            if (s.getPermalink() == null || s.getPermalink().equals("")) {
+                s.setPermalink(s.getId() + "");
+            }
 
+        }
         model.addAttribute("totalPages", posts.getTotalPages());
         model.addAttribute("posts", posts);
         model.addAttribute("page", page + 1);
